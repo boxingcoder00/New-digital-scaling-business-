@@ -16,7 +16,8 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faq">FAQS</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
             <button class="menu-toggle">☰</button>
         </nav>
@@ -29,7 +30,7 @@
                     <h1>Digital Experiences That Transform Businesses</h1>
                     <p>In today's competitive digital landscape where customers are constantly distracted, the most cost-effective way to acquire new customers is to have them come to you. That's exactly what we help you achieve.</p>
                     <div class="cta-buttons">
-                        <a href="#contact" class="btn btn-primary">Start Your Project</a>
+                        <a href="/pinellasseocompany/contact.html" class="btn btn-primary">Start Your Project</a>
                         <a href="#portfolio" class="btn btn-secondary">View Our Work</a>
                     </div>
                 </div>
@@ -145,6 +146,105 @@
                 </div>
             </div>
         </section>
+    
+
+     <section class="faq" id="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Here are some common questions we get about our SEO and web development services.</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How long does it take to see SEO results?
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                SEO is a long-term investment that typically takes 3-6 months to show significant results. However, some improvements like faster loading speeds and better user experience can have immediate positive impacts. The timeline depends on factors like your industry competitiveness, current website state, and the keywords you're targeting.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do you work with small businesses or just large companies?
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                We specialize in working with small to medium-sized businesses in the Pinellas County area. We understand the unique challenges small businesses face and create tailored strategies that fit your budget while delivering maximum ROI. Unlike large agencies, you'll work directly with our team, not junior staff.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What's included in your web design services?
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Our web design services include custom design creation, mobile-first responsive development, SEO optimization, performance optimization, content management system setup, basic on-page SEO, Google Analytics setup, and 30 days of post-launch support. We also provide training so you can manage your content independently.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do you require long-term contracts?
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                No, we don't lock our clients into long-term contracts. We prefer to earn your business each month through results and excellent service. For ongoing SEO services, we work on a month-to-month basis, and you can cancel anytime with 30 days notice. Our goal is to make you want to stay because of the value we provide.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How much do your services cost?
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Our pricing varies based on your specific needs and goals. Website design projects typically start at $2,500 for small business sites, while ongoing SEO services start at $1,200/month. We offer free consultations where we'll assess your needs and provide a detailed quote. We believe in transparent pricing with no hidden fees.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can you help improve my existing website's SEO?
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Absolutely! We can perform a comprehensive SEO audit of your existing website and identify opportunities for improvement. This includes technical SEO fixes, content optimization, local SEO enhancements, and link building strategies. We'll provide you with a detailed report and can implement the changes or guide your team through the process.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What makes you different from other SEO companies?
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                We're laser-focused on one thing: increasing the number of new customers you get each month. Unlike agencies that focus on vanity metrics, we measure success by revenue impact. We're local to Pinellas County, provide transparent reporting, don't require long-term contracts, and you'll work directly with experienced professionals, not junior staff.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do you provide ongoing website maintenance?
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Yes, we offer comprehensive website maintenance packages that include regular updates, security monitoring, backup management, performance optimization, and content updates. Our maintenance plans start at $150/month and ensure your website stays secure, fast, and up-to-date with the latest best practices.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer id="contact">
@@ -210,6 +310,29 @@
             }
         });
 
+        // FAQ Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const isActive = answer.classList.contains('active');
+
+                // Close all other FAQ items
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                    otherAnswer.classList.remove('active');
+                });
+                document.querySelectorAll('.faq-question').forEach(otherQuestion => {
+                    otherQuestion.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    answer.classList.add('active');
+                    question.classList.add('active');
+                }
+            });
+        });
+
         // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
@@ -225,8 +348,8 @@
             });
         }, observerOptions);
 
-        // Observe service cards and portfolio items
-        document.querySelectorAll('.service-card, .portfolio-item').forEach(el => {
+        // Observe service cards, portfolio items, and FAQ items
+        document.querySelectorAll('.service-card, .portfolio-item, .faq-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
