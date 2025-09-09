@@ -259,7 +259,6 @@
         .service-icon {
             font-size: 3rem;
             margin-bottom: 1.5rem;
-            filter: grayscale(1) brightness(0) saturate(100%) invert(15%) sepia(87%) saturate(4837%) hue-rotate(352deg) brightness(93%) contrast(93%);
         }
 
         .service-card h3 {
