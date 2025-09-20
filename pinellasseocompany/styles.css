@@ -218,7 +218,7 @@
         .section-title h2 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--gray-900);
+            color: black;
             margin-bottom: 1rem;
         }
 
@@ -496,163 +496,143 @@
         }
         
         /* Contact Section */
-.contact {
-    padding: 6rem 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    position: relative;
-}
+            .contact {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--white) 0%, var(--white)100%);
+            position: relative;
+            }
+            .contact .section-title h2 {
+                color: var(--gray-900); /* Changed from white to dark gray */
+                background: none;
+                /* Remove or comment out the -webkit-text-fill-color line */
+                /* -webkit-text-fill-color: white; */
+            }
 
-.contact .section-title h2 {
-    color: white;
-    background: none;
-    -webkit-text-fill-color: white;
-}
-
-.contact .section-title p {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-/* Form Container */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-}
-
-/* Form Layout */
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    color: white;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-}
-
-/* Updated Input Styles */
-.contact-form input,
-.contact-form textarea {
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    padding: 1rem;
-    font-size: 1rem;
-    color: white;
-    width: 100%; /* Full width within container */
-    margin: 0; /* Remove awkward margins */
-    transition: all 0.3s ease;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #ff6b6b;
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.3);
-}
-
-.contact-form textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-/* Updated Button Style */
-.contact-form button,
-.submit-btn {
-    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 1.5rem auto 0;
-    display: block;
-    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.contact-form button:hover,
-.submit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
-    opacity: 1; /* Override the 80% opacity */
-}
-
-.contact-form button:active,
-.submit-btn:active {
-    transform: translateY(-1px);
-}
-
-/* Override existing form styles to prevent conflicts */
-.contact-form input {
-    margin-left: 0 !important;
-    width: 100% !important;
-    margin-bottom: 0 !important;
-}
-
-.contact-form textarea {
-    margin-left: 0 !important;
-    width: 100% !important;
-    margin-bottom: 0 !important;
-}
-
-.contact-form button {
-    background-color: transparent !important;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .contact-form {
-        padding: 2rem 1.5rem;
-        margin: 0 1rem;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-    
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 16px; /* Prevents zoom on iOS */
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-form {
-        padding: 1.5rem 1rem;
-    }
-    
-    .contact-form button {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-    }
-}
+            .contact .section-title p {
+                color: var(--gray-600); /* Changed from white/transparent to readable gray */
+            }
+            /* Form Container */
+            .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white; /* Changed to solid white */
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); /* Reduced shadow opacity */
+            }
+            /* Form Layout */
+            .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            }
+            .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            }
+            .form-group label {
+            color: black; /* Changed to black */
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            }
+            /* Updated Input Styles */
+            .contact-form input,
+            .contact-form textarea {
+            background: white; /* Changed to solid white */
+            border: 2px solid #e0e0e0; /* Light gray border */
+            border-radius: 10px;
+            padding: 1rem;
+            font-size: 1rem;
+            color: black; /* Changed to black */
+            width: 100%; /* Full width within container */
+            margin: 0; /* Remove awkward margins */
+            transition: all 0.3s ease;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            }
+            .contact-form input::placeholder,
+            .contact-form textarea::placeholder {
+            color: #666; /* Dark gray placeholder text */
+            }
+            .contact-form input:focus,
+            .contact-form textarea:focus {
+            outline: none;
+            border-color: #ff6b6b;
+            background: white; /* Keep white on focus */
+            box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.3);
+            }
+            .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+            }
+            /* Updated Button Style */
+            .contact-form button,
+            .submit-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1.5rem auto 0;
+            display: block;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            }
+            .contact-form button:hover,
+            .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
+            opacity: 1; /* Override the 80% opacity */
+            }
+            .contact-form button:active,
+            .submit-btn:active {
+            transform: translateY(-1px);
+            }
+            /* Override existing form styles to prevent conflicts */
+            .contact-form input {
+            margin-left: 0 !important;
+            width: 100% !important;
+            margin-bottom: 0 !important;
+            }
+            .contact-form textarea {
+            margin-left: 0 !important;
+            width: 100% !important;
+            margin-bottom: 0 !important;
+            }
+            .contact-form button {
+            background-color: transparent !important;
+            }
+            /* Mobile Responsiveness */
+            @media (max-width: 768px) {
+            .contact-form {
+            padding: 2rem 1.5rem;
+            margin: 0 1rem;
+            }
+            .form-row {
+            grid-template-columns: 1fr;
+            gap: 0;
+            }
+            .contact-form input,
+            .contact-form textarea {
+            font-size: 16px; /* Prevents zoom on iOS */
+            }
+            }
+            @media (max-width: 480px) {
+            .contact-form {
+            padding: 1.5rem 1rem;
+            }
+            .contact-form button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            }
+            }
