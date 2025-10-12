@@ -636,3 +636,60 @@
             font-size: 1rem;
             }
             }
+
+            .phone-cta {
+    margin-left: auto;
+    margin-right: 20px;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.phone-cta:hover {
+    color: #0056b3;
+}
+
+/* Make phone number more prominent on mobile */
+@media (max-width: 768px) {
+    .phone-cta {
+        display: none; /* Hide in mobile menu to avoid clutter */
+    }
+    
+    /* Optionally show it in a different spot on mobile */
+    nav.container {
+        position: relative;
+    }
+}
+
+/* For desktop - ensure proper flex layout */
+@media (min-width: 769px) {
+    nav.container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-links {
+        margin-left: auto;
+    }
+}
+
+phone-cta {
+    margin-left: auto;
+    margin-right: 20px;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .phone-cta {
+        position: absolute;
+        top: 15px;
+        right: 60px; /* Position it left of the hamburger menu */
+        font-size: 0.85rem;
+    }
+}
