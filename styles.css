@@ -699,33 +699,42 @@ phone-cta {
             
 }
 
-.contact-intro {
-    background: linear-gradient(135deg, #ffffff 0%, #f8fffe 100%);
-    border-radius: 12px;
-    padding: 50px 45px;
-    margin-bottom: 50px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e8f0f0;
-}
+ .calendly-cta-float {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        z-index: 9999;
+        background: linear-gradient(135deg, #0069ff 0%, #0052cc 100%);
+        color: white;
+        padding: 16px 28px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        box-shadow: 0 6px 24px rgba(0, 105, 255, 0.4);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        animation: float-pulse 3s ease-in-out infinite;
+    }
 
-.calendly-cta-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    background: #0069ff;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 20px rgba(0,105,255,0.4);
-    transition: all 0.3s;
-}
+    .calendly-cta-float:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 105, 255, 0.6);
+        color: white;
+    }
 
-.calendly-cta-float:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 25px rgba(0,105,255,0.6);
-}
+    @keyframes float-pulse {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
 
- 
+    @media (max-width: 768px) {
+        .calendly-cta-float {
+            padding: 12px 20px;
+            font-size: 13px;
+            bottom: 15px;
+            right: 15px;
+        }
+    }
