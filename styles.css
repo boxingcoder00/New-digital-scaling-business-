@@ -708,4 +708,24 @@ phone-cta {
     border: 1px solid #e8f0f0;
 }
 
+.calendly-cta-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: #0069ff;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 20px rgba(0,105,255,0.4);
+    transition: all 0.3s;
+}
+
+.calendly-cta-float:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0,105,255,0.6);
+}
+
  
